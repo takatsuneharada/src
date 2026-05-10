@@ -142,6 +142,16 @@
       touchY = e.touches[0].clientY;
     });
 
+    window.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowUp") {
+    touchY -= 40;
+  }
+
+  if (e.key === "ArrowDown") {
+    touchY += 40;
+  }
+});
+
     restartBtn.addEventListener("click", () => {
       enemies = [];
       score = 0;
